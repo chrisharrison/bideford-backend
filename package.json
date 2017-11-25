@@ -1,0 +1,28 @@
+{
+  "name": "bideford-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisharrison/bideford-backend.git"
+  },
+  "author": "Bideford team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisharrison/bideford-backend/issues"
+  },
+  "homepage": "https://github.com/chrisharrison/bideford-backend#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "ws": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.39",
+    "@types/ws": "^3.2.0",
+    "typescript": "^2.6.1"
+  }
+}
