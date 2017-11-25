@@ -19,6 +19,7 @@
   "homepage": "https://github.com/chrisharrison/bideford-backend#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "redis": "^2.8.0",
     "ws": "^3.3.2"
   },
   "devDependencies": {
