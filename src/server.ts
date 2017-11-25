@@ -1,43 +1,32 @@
 import * as express from 'express';
 import * as http from 'http';
 import * as WebSocket from 'ws';
-import * as redis from 'redis';
+// import * as redis from 'redis';
 
 const app = express();
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
-const redisClient = redis.createClient();
+// const redisClient = redis.createClient();
 
-let closeTimeout = 2 * 1000; // 2 seconds
 let totalCount = 0;
 
-
 wss.on('connection', (ws: WebSocket) => {
-    add();
-    update();
+    update(+1);
     ws.on('close', (event: Event) => {
-        remove();
-        update();
+        update(-1);
     });
 });
 
-function add() {
-    totalCount++;
-}
-
-function remove() {
-    totalCount--;
-}
-
-function update() {
+function update(value: number) {
+    totalCount = totalCount + value;
     wss.clients.forEach(client => {
         client.send(`{"totalCount": ${totalCount}}`);
     });
 }
 
-setInterval(() => {
-    redisClient.zadd('', totalCount);
-}, 1000);
+// setInterval(() => {
+//     redisClient.zadd('', totalCount);
+// }, 1000);
 
 //start our server
 server.listen(process.env.PORT || 8999, () => {
