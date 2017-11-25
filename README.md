@@ -13,5 +13,7 @@ You need npm.
 You need to install the dependencies:
 `npm install`
 
+## Running ##
+
 Running the server:
 `npm start`
