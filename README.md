@@ -17,3 +17,9 @@ You need to install the dependencies:
 
 Running the server:
 `npm start`
+
+## Acknowledgements ##
+
+&copy; Copyright 2017 The Bideford Team Members (Adam Ainsworth, John Cowen, Chris Harrison, Gary Moyle, Sangheethan Subramaniam). All rights reserved.
+
+
